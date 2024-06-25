@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 800px;
+    height: 600px;
+}
+
+.sidebar {
+    background-image: url('./assets/images/bg-sidebar-desktop.svg');
+    background-size: cover;
+    color: #fff;
+    padding: 20px;
+    width: 300px;
+}
+
+.sidebar .step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sub-step {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-step p {
+    margin-bottom: 0;
+    opacity: 70%;
+}
+
+.sidebar .step .step-number {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.sidebar .step .step-label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form {
+    padding: 40px;
+    flex-grow: 1;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step-active {
+    display: block;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #5f63d3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin-left: 350px; */
+}
+
+.first-button{
+    margin-left: 300px;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 300px;
+}
+
+.back-button{
+    background-color: white;
+    color: #333;
+}
+
+button:hover {
+    background-color: #4b50c1;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.multiStepForm{
+    width: 200px;
+}
+

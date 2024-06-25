@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Multi-step form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="sidebar">
+    <div class="step step-active">
+      <span class="step-number">1</span>
+      <div class="sub-step">
+        <p>Step 1</p>
+        <span class="step-label">Your Info</span>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">2</span>
+      <div class="sub-step">
+        <p>Step 2</p>
+        <span class="step-label">Select Plan</span>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">3</span>
+      <div class="sub-step">
+        <p>Step 3</p>
+        <span class="step-label">Add-Ons</span>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-number">4</span>
+      <div class="sub-step">
+        <p>Step 4</p>
+        <span class="step-label">Summary</span>
+      </div>
+    </div>
+  </div>
+
+  <form id="multiStepForm">
+    <div class="form-step form-step-active">
+      <h2>Personal Info</h2>
+      <p>Please provide your name, email address, and phone number.</p>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="e.g. Stephen King" required>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="e.g. stephenking@lorem.com" required>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="e.g. +1 234 567 890" required>
+      <div class="first-button">
+        <button type="button" onclick="nextStep()">Next Step</button>
+      </div>
+    </div>
+
+    <div class="form-step">
+      <h2>Select your plan</h2>
+      
+      <p>You have the option of monthly or yearly billing.</p>
+      <label>
+        <input type="radio" name="plan" value="Arcade" required> Arcade $9/mo
+      </label>
+      <label>
+        <input type="radio" name="plan" value="Advanced" required> Advanced $12/mo
+      </label>
+      <label>
+        <input type="radio" name="plan" value="Pro" required> Pro $15/mo
+      </label>
+      <div class="button">
+        <button class="back-button" type="button" onclick="prevStep()">Go Back</button>
+        <button type="button" onclick="nextStep()">Next Step</button>
+      </div>
+    </div>
+
+    <div class="form-step">
+      <h2>Pick add-ons</h2>
+      <p>Add-ons help enhance your gaming experience.</p>
+      <label>
+        <input type="checkbox" name="addon" value="Online service"> Online service +$1/mo
+      </label>
+      <label>
+        <input type="checkbox" name="addon" value="Larger storage"> Larger storage +$2/mo
+      </label>
+      <label>
+        <input type="checkbox" name="addon" value="Customizable Profile"> Customizable Profile +$2/mo
+      </label>
+      <div class="button">
+        <button class="back-button" type="button" onclick="prevStep()">Go Back</button>
+        <button type="button" onclick="nextStep()">Next Step</button>
+      </div>
+    </div>
+
+    <div class="form-step">
+      <h2>Finishing up</h2>
+      <p>Double-check everything looks OK before confirming.</p>
+      <div id="summary"></div>
+      <p>Total (per month/year)</p>
+      <div class="button">
+        <button class="back-button" type="button" onclick="prevStep()">Go Back</button>
+        <button type="submit">Confirm</button>
+      </div>
+    </div>
+
+    <div class="form-step">
+      <h2>Thank you!</h2>
+      <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+    </div>
+  </form>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
